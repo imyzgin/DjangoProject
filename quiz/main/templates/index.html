@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href ="/static/style.css"/>
+        <title>Сайт про книги</title>
+    </head>
+    <body>
+
+
+        <header>
+            <h1>Books</h1>
+        </header>
+        <ul>
+        {% for book in books %}
+            <li>{{ book.bookName }} (by: {{ book.author}})</li>
+        {%endfor%}
+        </ul>
+
+
+        <header>
+            <h1>Authors</h1>
+        </header>
+        <ul>
+        {% for author in authors %}
+            <li>{{ author.firstName }} {{author.lastName}}</li>
+        {%endfor%}
+        </ul>
+
+
+        <header>
+            <h1>Genres</h1>
+        </header>
+        <ul>
+        {% for genre in genres %}
+            <li>{{ genre.genreName }}</li>
+        {%endfor%}
+        </ul>
+
+    </body>
+</html>
